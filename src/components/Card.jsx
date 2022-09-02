@@ -16,4 +16,6 @@ export default function Card() {
             <p><span className='bold'>From $136</span> / person</p>
         </div>
     )
+
+    
 }
