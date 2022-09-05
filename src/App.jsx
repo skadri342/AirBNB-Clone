@@ -3,26 +3,33 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Card from './components/Card'
-import dataElements from './data'
+import data from './data'
 
 function App() {
 
-  const data = dataElements.map(properties => {
+  const cards = data.map(item => {
     return <Card 
+
+      {...item}
     
-      img={properties.coverImg} 
-      rating={properties.stats.rating}
-      reviewCount={properties.stats.reviewCount}
-      country={properties.location}
-      title={properties.title}
-      price={properties.price}/> 
+      // img={item.coverImg} 
+      // rating={item.stats.rating}
+      // reviewCount={item.stats.reviewCount}
+      // country={item.location}
+      // title={item.title}
+      // price={item.price}
+      // openSpots={item.openSpots}
+    
+    /> 
   })
 
   return (
     <div className='container'>
       <Navbar/>
       <Hero/>
-      {data}
+      <section className='cards-list'>
+        {cards}
+      </section>
       
       {/* <Card
         img="katie-zaferes.png"
